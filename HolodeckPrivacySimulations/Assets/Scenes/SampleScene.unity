@@ -480,7 +480,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -488,7 +488,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: f37cabb5e1c0c43dc87582ab9fd114b2, type: 2}
   m_TargetDisplay: 3
   m_TargetEye: 3
   m_HDR: 1
@@ -735,7 +735,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: bac8d518a038f4ed690c4c8db0b3968f, type: 2}
   m_TargetDisplay: 2
   m_TargetEye: 3
   m_HDR: 1
@@ -986,7 +986,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -994,7 +994,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 73a77731aabb94e9399048064505d970, type: 2}
   m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
@@ -1352,6 +1352,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holodeck: {fileID: 1725605180}
   startUpPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &888693527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888693518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b004c96b787048bbbd66772dcd0505c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userView: {fileID: 8400000, guid: 73a77731aabb94e9399048064505d970, type: 2}
+  sameView: {fileID: 8400000, guid: f37cabb5e1c0c43dc87582ab9fd114b2, type: 2}
+  unauthView: {fileID: 8400000, guid: bac8d518a038f4ed690c4c8db0b3968f, type: 2}
+  imageFilePrefix: sample
 --- !u!1 &933237925
 GameObject:
   m_ObjectHideFlags: 0
