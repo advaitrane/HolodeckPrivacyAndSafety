@@ -59,5 +59,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 # model files
-/[Aa]ssets/*.onnx
+/[Aa]ssets/Models/
+/[Aa]ssets/Models.meta
 

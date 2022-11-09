@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartUp : MonoBehaviour
+public class ShutDown : MonoBehaviour
 {
-    public bool start;
-
+    public bool shutDown;
     // Start is called before the first frame update
     void Start()
     {
-        start = false;
+        shutDown = false;
     }
 
     // Update is called once per frame
@@ -18,23 +17,23 @@ public class StartUp : MonoBehaviour
         // empty update function
     }
 
-    public void Initialize()
+    public void ShutDownDisplay()
     {
-        if (start == false)
+        if (shutDown == false)
         {
-            start = true;
+            shutDown = true;
             int numDrones = this.gameObject.transform.childCount;
             for (int i = 0; i < numDrones; i++)
             {
                 RenderImage ri = this.gameObject.transform.GetChild(i).GetComponent<RenderImage>();
                 if (ri)
                 {
-                    ri.InitializeDrone();
+                    ri.ShutDownDrone();
                 }
                 MonitorYOLOv4 myv4 = this.gameObject.transform.GetChild(i).GetComponent<MonitorYOLOv4>();
                 if (myv4)
                 {
-                    myv4.InitializeDrone();
+                    myv4.ShutDownDrone();
                 }
             }
         }

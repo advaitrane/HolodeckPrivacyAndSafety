@@ -9,6 +9,7 @@ public class RenderImage : MonoBehaviour
     public Vector3 targetPosition = new Vector3(0, 1.5f, 1);
     
     private bool startUp = false;
+    private bool shutDown = false;
     private float speed = 0.5f;
     private float distanceToStop = 0.01f;
     private Vector3 desiredVelocity;
@@ -50,10 +51,28 @@ public class RenderImage : MonoBehaviour
                 this.transform.Find("Surface").GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
             }
         }
+
+        if (shutDown == true)
+        {
+            float EuclideanDist = (startPosition - Drone.position).sqrMagnitude;
+
+            if (EuclideanDist > distanceToStop)
+            {
+                var direction = startPosition - Drone.position;
+                Drone.AddRelativeForce(direction.normalized * speed, ForceMode.Force);
+            }
+        }
     }
 
     public void InitializeDrone()
     {
         startUp = true;
+    }
+
+    public void ShutDownDrone()
+    {
+        startUp = false;
+        shutDown = true;
+        this.transform.Find("Surface").GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
     }
 }
