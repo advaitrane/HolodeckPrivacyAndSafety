@@ -51,14 +51,14 @@ def plot_metric_pairs(metrics_pair, scene_pair, view_pair, metrics, colors):
 
 def main():
 	metrics_user_same = []
-	metrics_user_same.append(compare_for_scene("sample", ("user", "same")))
-	metrics_user_same.append(compare_for_scene("ar", ("user", "same")))
-	plot_metric_pairs(metrics_user_same, ('sample', 'ar'), ("user", "same"), ('PSNR', 'SSIM', 'VIF'), ['r', 'g', 'b'])
+	metrics_user_same.append(compare_for_scene("sample", ("user_spine", "same_spine")))
+	metrics_user_same.append(compare_for_scene("ar", ("user_spine", "same_spine")))
+	plot_metric_pairs(metrics_user_same, ('sample', 'ar'), ("user_spine", "same_spine"), ('PSNR', 'SSIM', 'VIF'), ['r', 'g', 'b'])
 	
 	metrics_user_unauth = []
-	metrics_user_unauth.append(compare_for_scene("sample", ("user", "unauth")))
-	metrics_user_unauth.append(compare_for_scene("ar", ("user", "unauth")))
-	plot_metric_pairs(metrics_user_unauth, ('sample', 'ar'), ("user", "unauth"), ('PSNR', 'SSIM', 'VIF'), ['r', 'g', 'b'])
+	metrics_user_unauth.append(compare_for_scene("sample", ("user_spine", "unauth_spine")))
+	metrics_user_unauth.append(compare_for_scene("ar", ("user_spine", "unauth_spine")))
+	plot_metric_pairs(metrics_user_unauth, ('sample', 'ar'), ("user_spine", "unauth_spine"), ('PSNR', 'SSIM', 'VIF'), ['r', 'g', 'b'])
 
 
 if __name__ == '__main__':
