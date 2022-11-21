@@ -7,6 +7,7 @@ public class RenderImage : MonoBehaviour
     public Rigidbody Drone;
     public Vector3 startPosition = new Vector3(0, 0, 1);
     public Vector3 targetPosition = new Vector3(0, 1.5f, 1);
+    public bool trackHand = false;
     
     private bool startUp = false;
     private bool shutDown = false;
@@ -15,6 +16,7 @@ public class RenderImage : MonoBehaviour
     private Vector3 desiredVelocity;
     private float lastEuclideanDist;
     private bool surfaceEmission = false;
+    private bool atTarget = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +36,7 @@ public class RenderImage : MonoBehaviour
     void FixedUpdate() 
     {
         Drone.AddForce(0,9.80665f,0);
-        if (startUp == true)
+        if (startUp == true && atTarget == false)
         {
             float EuclideanDist = (targetPosition - Drone.position).sqrMagnitude;
 
@@ -42,6 +44,7 @@ public class RenderImage : MonoBehaviour
             {
                 var direction = targetPosition - Drone.position;
                 Drone.AddRelativeForce(direction.normalized * speed, ForceMode.Force);
+
             }
 
             // Drone.position = targetPosition;
@@ -49,6 +52,8 @@ public class RenderImage : MonoBehaviour
             if ((EuclideanDist < distanceToStop) && !surfaceEmission)
             {
                 this.transform.Find("Surface").GetComponent<MeshRenderer>().material.EnableKeyword("_EMISSION");
+                surfaceEmission = true;
+                atTarget = true;
             }
         }
 
@@ -62,6 +67,11 @@ public class RenderImage : MonoBehaviour
                 Drone.AddRelativeForce(direction.normalized * speed, ForceMode.Force);
             }
         }
+
+        if (atTarget == true && trackHand)
+        {   
+            
+        }
     }
 
     public void InitializeDrone()
@@ -74,5 +84,6 @@ public class RenderImage : MonoBehaviour
         startUp = false;
         shutDown = true;
         this.transform.Find("Surface").GetComponent<MeshRenderer>().material.DisableKeyword("_EMISSION");
+        surfaceEmission = false;
     }
 }
