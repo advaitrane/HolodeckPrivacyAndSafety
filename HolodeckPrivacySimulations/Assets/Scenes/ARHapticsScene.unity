@@ -696,7 +696,7 @@ Transform:
   m_Children:
   - {fileID: 22065200}
   m_Father: {fileID: 1725605182}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &435846972
 MonoBehaviour:
@@ -713,6 +713,10 @@ MonoBehaviour:
   Drone: {fileID: 435846973}
   startPosition: {x: 0.5, y: 0.2, z: 2}
   targetPosition: {x: 0.25, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!54 &435846973
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1733,6 +1737,10 @@ MonoBehaviour:
   Drone: {fileID: 725803138}
   startPosition: {x: 4, y: 0.2, z: 1.6}
   targetPosition: {x: 3.8, y: 1, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1001 &877861909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1848,6 +1856,10 @@ MonoBehaviour:
   Drone: {fileID: 877861912}
   startPosition: {x: 4.4, y: 0.2, z: 1.6}
   targetPosition: {x: 3.9, y: 0.8, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &888693518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -1888,6 +1900,141 @@ MonoBehaviour:
   sameView: {fileID: 8400000, guid: f37cabb5e1c0c43dc87582ab9fd114b2, type: 2}
   unauthView: {fileID: 8400000, guid: bac8d518a038f4ed690c4c8db0b3968f, type: 2}
   imageFilePrefix: ar_haptics
+--- !u!1 &906877552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906877553}
+  - component: {fileID: 906877558}
+  - component: {fileID: 906877557}
+  - component: {fileID: 906877556}
+  - component: {fileID: 906877555}
+  - component: {fileID: 906877554}
+  m_Layer: 6
+  m_Name: OxygenAR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906877553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 0, z: 2}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1054143947}
+  m_Father: {fileID: 1725605182}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &906877554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99dc70ce2fcdd4459bb8fedccacaee57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drone: {fileID: 906877555}
+  startPosition: {x: 0, y: 0.2, z: 2}
+  targetPosition: {x: 0, y: 1.45, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
+--- !u!54 &906877555
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 2
+  m_AngularDrag: 5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &906877556
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &906877557
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8eaa0c6ac083849ecb4612835cb81b73, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &906877558
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906877552}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &933237925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2535,7 @@ Transform:
   m_GameObject: {fileID: 1012462148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1939409574}
@@ -2427,7 +2574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ea36a12092bb440e0bd9c1692e006998, type: 2}
+  - {fileID: 2100000, guid: 1c416bc96353e4778ab369e9694a18dc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2456,6 +2603,103 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012462148}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1054143946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054143947}
+  - component: {fileID: 1054143950}
+  - component: {fileID: 1054143949}
+  - component: {fileID: 1054143948}
+  m_Layer: 6
+  m_Name: Surface
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1054143947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054143946}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 906877553}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1054143948
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054143946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1054143949
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054143946}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: ea36a12092bb440e0bd9c1692e006998, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1054143950
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054143946}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1085719175
 PrefabInstance:
@@ -2572,6 +2816,10 @@ MonoBehaviour:
   Drone: {fileID: 1085719178}
   startPosition: {x: 4, y: 0.2, z: 2}
   targetPosition: {x: 3.8, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &1106532908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,6 +3014,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141256529}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1153033061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1153033062}
+  m_Layer: 0
+  m_Name: Marker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1153033062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153033061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1502379073}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178729090
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,7 +3170,7 @@ Transform:
   m_GameObject: {fileID: 1253731673}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 4.8, y: 4.8, z: 4.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1939409574}
@@ -3075,6 +3354,10 @@ MonoBehaviour:
   Drone: {fileID: 1292357568}
   startPosition: {x: 3.6, y: 0.2, z: 2}
   targetPosition: {x: 3.8, y: 1.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1001 &1502379072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3136,6 +3419,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+--- !u!4 &1502379073 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8626512282341172403, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  m_PrefabInstance: {fileID: 1502379072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1543240808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3446,6 +3734,10 @@ MonoBehaviour:
   Drone: {fileID: 1704780597}
   startPosition: {x: 3.6, y: 0.2, z: 3}
   targetPosition: {x: 3.9, y: 1.8, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &1725605180
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3781,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1939409574}
+  - {fileID: 906877553}
   - {fileID: 2128842064}
   - {fileID: 435846971}
   - {fileID: 1881522598}
@@ -3620,6 +3913,10 @@ MonoBehaviour:
   Drone: {fileID: 1747958792}
   startPosition: {x: 3.6, y: 0.2, z: 1.6}
   targetPosition: {x: 4, y: 0.6, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &1784602728
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +4129,10 @@ MonoBehaviour:
   Drone: {fileID: 1828155524}
   startPosition: {x: 4.4, y: 0.2, z: 2.6}
   targetPosition: {x: 4.1, y: 2.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1001 &1845266144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3845,7 +4146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456098, guid: 4dd5fccded1f45d41ab95e29d4cc4170, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 456098, guid: 4dd5fccded1f45d41ab95e29d4cc4170, type: 3}
       propertyPath: m_LocalScale.x
@@ -3947,6 +4248,10 @@ MonoBehaviour:
   Drone: {fileID: 1845266147}
   startPosition: {x: 0.5, y: 0.2, z: 2}
   targetPosition: {x: 0.5, y: 0.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &1864072978
 GameObject:
   m_ObjectHideFlags: 0
@@ -4057,7 +4362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456098, guid: 4dd5fccded1f45d41ab95e29d4cc4170, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 456098, guid: 4dd5fccded1f45d41ab95e29d4cc4170, type: 3}
       propertyPath: m_LocalScale.x
@@ -4159,6 +4464,10 @@ MonoBehaviour:
   Drone: {fileID: 1881522600}
   startPosition: {x: -0.5, y: 0.2, z: 2}
   targetPosition: {x: -0.5, y: 0.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &1915412997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,6 +4595,10 @@ MonoBehaviour:
   Drone: {fileID: 1939409573}
   startPosition: {x: 0, y: 0.2, z: 2}
   targetPosition: {x: 0, y: 1.5, z: 2}
+  trackHand: 1
+  handMarker: {fileID: 1153033061}
+  targetPosition2: {x: -0.25, y: 1.4, z: 2}
+  targetPosition3: {x: 0.25, y: 1.4, z: 2}
 --- !u!1 &1980773955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4811,10 @@ MonoBehaviour:
   Drone: {fileID: 1999638442}
   startPosition: {x: 4, y: 0.2, z: 2.6}
   targetPosition: {x: 4, y: 2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &2023966177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4892,6 +5209,10 @@ MonoBehaviour:
   Drone: {fileID: 2102050937}
   startPosition: {x: 4.4, y: 0.2, z: 2}
   targetPosition: {x: 3.9, y: 1.6, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!1 &2128842063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4927,7 +5248,7 @@ Transform:
   m_Children:
   - {fileID: 136782404}
   m_Father: {fileID: 1725605182}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2128842065
 MonoBehaviour:
@@ -4944,6 +5265,10 @@ MonoBehaviour:
   Drone: {fileID: 2128842066}
   startPosition: {x: -0.5, y: 0.2, z: 2}
   targetPosition: {x: -0.25, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPosition2: {x: 0, y: 1.5, z: 1}
+  targetPosition3: {x: 0, y: 1.5, z: 1}
 --- !u!54 &2128842066
 Rigidbody:
   m_ObjectHideFlags: 0

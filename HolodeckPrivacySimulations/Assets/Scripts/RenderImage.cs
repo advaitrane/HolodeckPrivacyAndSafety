@@ -8,6 +8,9 @@ public class RenderImage : MonoBehaviour
     public Vector3 startPosition = new Vector3(0, 0, 1);
     public Vector3 targetPosition = new Vector3(0, 1.5f, 1);
     public bool trackHand = false;
+    public GameObject handMarker;
+    public Vector3 targetPosition2 = new Vector3(0, 1.5f, 1);
+    public Vector3 targetPosition3 = new Vector3(0, 1.5f, 1);
     
     private bool startUp = false;
     private bool shutDown = false;
@@ -17,6 +20,8 @@ public class RenderImage : MonoBehaviour
     private float lastEuclideanDist;
     private bool surfaceEmission = false;
     private bool atTarget = false;
+    private float trackSpeed = 0.1f;
+    private float trackDistanceToStop = 0.0000001f;
 
     // Start is called before the first frame update
     void Start()
@@ -70,7 +75,38 @@ public class RenderImage : MonoBehaviour
 
         if (atTarget == true && trackHand)
         {   
-            
+            Vector3 markerPosition = handMarker.transform.position;
+
+            float targetDist = (markerPosition - targetPosition).sqrMagnitude;
+            float targetDist2 = (markerPosition - targetPosition2).sqrMagnitude;
+            float targetDist3 = (markerPosition - targetPosition3).sqrMagnitude;
+
+            Vector3 trackPosition;
+            float minDist = -1f;
+            if (targetDist < targetDist2)
+            {
+                trackPosition = targetPosition;
+                minDist = targetDist;
+            }
+            else
+            {
+                trackPosition = targetPosition2;
+                minDist = targetDist2;
+            }
+            if (minDist > targetDist3)
+            {
+                trackPosition = targetPosition3;
+                minDist = targetDist3;
+            }
+
+            float EuclideanDist = (trackPosition - Drone.position).sqrMagnitude;
+
+            if (EuclideanDist > trackDistanceToStop)
+            {
+                var direction = trackPosition - Drone.position;
+                Drone.AddRelativeForce(direction.normalized * trackSpeed, ForceMode.Force);
+
+            }
         }
     }
 
