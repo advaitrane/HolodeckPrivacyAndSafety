@@ -98,6 +98,7 @@ namespace StarterAssets
         private int _animIDFreeFall;
         private int _animIDMotionSpeed;
         private int _animIDTouch;
+        private int _animIDTouchHeight;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
         private PlayerInput _playerInput;
@@ -176,6 +177,7 @@ namespace StarterAssets
             _animIDFreeFall = Animator.StringToHash("FreeFall");
             _animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
             _animIDTouch = Animator.StringToHash("Touch");
+            _animIDTouchHeight = Animator.StringToHash("TouchHeight");
         }
 
         private void GroundedCheck()
@@ -358,6 +360,7 @@ namespace StarterAssets
                 if (_hasAnimator)
                 {
                     _animator.SetBool(_animIDTouch, true);
+                    _animator.SetFloat(_animIDTouchHeight, _input.touchHeight);
                 }
             }
             else
@@ -365,6 +368,7 @@ namespace StarterAssets
                 if (_hasAnimator)
                 {
                     _animator.SetBool(_animIDTouch, false);
+                    _animator.SetFloat(_animIDTouchHeight, 0f);
                 }
             }
         }

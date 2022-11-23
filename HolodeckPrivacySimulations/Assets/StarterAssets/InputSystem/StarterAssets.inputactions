@@ -44,7 +44,25 @@
                 {
                     "name": "Touch",
                     "type": "Button",
-                    "id": "235608dd-5e96-4d8e-835e-bd4561faa4db",
+                    "id": "8236e9fd-b603-4a0f-82f8-bd32464d1ee0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HandUp",
+                    "type": "Button",
+                    "id": "37e9afcc-a45e-413c-b360-bcfcd34bce35",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HandDown",
+                    "type": "Button",
+                    "id": "8549d73a-2530-40db-bad7-8d5d6e363615",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -230,12 +248,34 @@
                 },
                 {
                     "name": "",
-                    "id": "367f6dd8-4358-4767-a4fe-103358db93b8",
+                    "id": "ac0cf047-df76-42e8-937a-888d47f68958",
                     "path": "<Keyboard>/#(T)",
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f72ef0a4-a316-4eaa-8e0f-595f9374cab1",
+                    "path": "<Keyboard>/#(5)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "HandUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a99141a9-71d7-4055-9426-a5f6c0a7b9cd",
+                    "path": "<Keyboard>/#(G)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "HandDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -13,6 +13,7 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 		public bool touch;
+		public float touchHeight;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -20,6 +21,9 @@ namespace StarterAssets
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
+
+		// [Header("Shoulder joint rotation")]
+		// public GameObject rightShoulder;
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
@@ -48,6 +52,16 @@ namespace StarterAssets
 		public void OnTouch(InputValue value)
 		{
 			TouchInput(value.isPressed);
+		}
+
+		public void OnHandUp(InputValue value)
+		{
+			HandUpInput();
+		}
+		
+		public void OnHandDown(InputValue value)
+		{
+			HandDownInput();
 		}
 #endif
 
@@ -82,6 +96,16 @@ namespace StarterAssets
 			{
 				touch = true;
 			}
+		}
+
+		public void HandUpInput()
+		{
+			if (touch && touchHeight <= 1) touchHeight = touchHeight+1;
+		}
+
+		public void HandDownInput()
+		{
+			if (touch && touchHeight >= -1) touchHeight = touchHeight-1;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
