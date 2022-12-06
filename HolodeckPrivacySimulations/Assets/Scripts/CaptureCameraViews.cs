@@ -23,9 +23,9 @@ public class CaptureCameraViews : MonoBehaviour
 
     void CaptureViews()
     {
-        CaptureView(userView, imageFilePrefix + "_user_xxx_view");
-        CaptureView(sameView, imageFilePrefix + "_same_xxx_view");
-        CaptureView(unauthView, imageFilePrefix + "_unauth_xxx_view");
+        CaptureView(userView, imageFilePrefix + "_user_molecule_view");
+        CaptureView(sameView, imageFilePrefix + "_same_molecule_view");
+        CaptureView(unauthView, imageFilePrefix + "_unauth_molecule_view");
     }
 
     void CaptureView(RenderTexture view, string filename)

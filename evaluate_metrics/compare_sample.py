@@ -17,8 +17,8 @@ def compare_images(image1, image2):
 	return psnr, ssim, vif
 
 def main():
-	image1_filename = "ImagesCopy/advait_noback.jpeg"
-	image2_filename = "ImagesCopy/advait_contrast.jpeg"
+	image1_filename = "ImagesCopy/ar_haptics_user_xxx_view.jpg"
+	image2_filename = "ImagesCopy/ar_haptics_same_xxx_view.jpg"
 
 	img1 = Image.open(image1_filename)
 	img2 = Image.open(image2_filename)

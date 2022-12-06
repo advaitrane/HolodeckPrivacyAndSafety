@@ -727,7 +727,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 30
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -735,7 +735,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: bac8d518a038f4ed690c4c8db0b3968f, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 2
   m_TargetEye: 3
   m_HDR: 1
@@ -994,7 +994,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 73a77731aabb94e9399048064505d970, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 1
   m_TargetEye: 3
   m_HDR: 1
@@ -1211,8 +1211,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 725803138}
-  startPosition: {x: 0, y: 0.2, z: 1.6}
-  targetPosition: {x: -0.2, y: 1, z: 2}
+  startPosition: {x: 1, y: 0.2, z: 1.6}
+  targetPosition: {x: 0.8, y: 1, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1001 &877861909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1326,8 +1329,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 877861912}
-  startPosition: {x: 0.4, y: 0.2, z: 1.6}
-  targetPosition: {x: -0.1, y: 0.8, z: 2}
+  startPosition: {x: 1.4, y: 0.2, z: 1.6}
+  targetPosition: {x: 0.9, y: 0.8, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &888693518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
@@ -1516,7 +1522,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 100
+  field of view: 113
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1542,7 +1548,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2, y: 1, z: 2}
+  m_LocalPosition: {x: -3, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1759,8 +1765,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1085719178}
-  startPosition: {x: 0, y: 0.2, z: 2}
-  targetPosition: {x: -0.2, y: 1.4, z: 2}
+  startPosition: {x: 1, y: 0.2, z: 2}
+  targetPosition: {x: 0.8, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &1106532908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,8 +2077,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1292357568}
-  startPosition: {x: -0.4, y: 0.2, z: 2}
-  targetPosition: {x: -0.2, y: 1.2, z: 2}
+  startPosition: {x: 0.6, y: 0.2, z: 2}
+  targetPosition: {x: 0.8, y: 1.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &1418137618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,8 +2452,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1704780597}
-  startPosition: {x: -0.4, y: 0.2, z: 3}
-  targetPosition: {x: -0.1, y: 1.8, z: 2}
+  startPosition: {x: 0.6, y: 0.2, z: 3}
+  targetPosition: {x: 0.9, y: 1.8, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &1725605180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2612,8 +2627,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1747958792}
-  startPosition: {x: -0.4, y: 0.2, z: 1.6}
-  targetPosition: {x: 0, y: 0.6, z: 2}
+  startPosition: {x: 0.6, y: 0.2, z: 1.6}
+  targetPosition: {x: 1, y: 0.6, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &1784602728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,8 +2842,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1828155524}
-  startPosition: {x: 0.4, y: 0.2, z: 2.6}
-  targetPosition: {x: 0.1, y: 2.2, z: 2}
+  startPosition: {x: 1.4, y: 0.2, z: 2.6}
+  targetPosition: {x: 1.1, y: 2.2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1001 &1845266144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2939,8 +2960,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1845266147}
-  startPosition: {x: -3.5, y: 0.2, z: 2}
-  targetPosition: {x: -3.75, y: 1.4, z: 2}
+  startPosition: {x: -0.5, y: 0.2, z: 2}
+  targetPosition: {x: -0.75, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1001 &1881522597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3054,8 +3078,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1881522600}
-  startPosition: {x: -4.5, y: 0.2, z: 2}
-  targetPosition: {x: -4.25, y: 1.4, z: 2}
+  startPosition: {x: -1.5, y: 0.2, z: 2}
+  targetPosition: {x: -1.25, y: 1.4, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &1915412997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,8 +3208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1939409573}
-  startPosition: {x: -4, y: 0.2, z: 2}
-  targetPosition: {x: -4, y: 1.5, z: 2}
+  startPosition: {x: -1, y: 0.2, z: 2}
+  targetPosition: {x: -1, y: 1.5, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1001 &1999638439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3296,8 +3326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 1999638442}
-  startPosition: {x: 0, y: 0.2, z: 2.6}
-  targetPosition: {x: 0, y: 2, z: 2}
+  startPosition: {x: 1, y: 0.2, z: 2.6}
+  targetPosition: {x: 1, y: 2, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
 --- !u!1 &2050796333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,5 +3626,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Drone: {fileID: 2102050937}
-  startPosition: {x: 0.4, y: 0.2, z: 2}
-  targetPosition: {x: -0.1, y: 1.6, z: 2}
+  startPosition: {x: 1.4, y: 0.2, z: 2}
+  targetPosition: {x: 0.9, y: 1.6, z: 2}
+  trackHand: 0
+  handMarker: {fileID: 0}
+  targetPositions: []
