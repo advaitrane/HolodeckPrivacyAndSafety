@@ -1,6 +1,6 @@
 # HolodeckPrivacyAndSafety
 This repository contains the code for simulations of the threat models and solution models for holodeck applications.
-The simulations are implemented in Unity (version 2021.3.13f1). To see instructions to install Unity refer to - [https://unity.com]{https://unity.com}
+The simulations are implemented in Unity (version 2021.3.13f1). To see instructions to install Unity refer to - [https://unity.com](https://unity.com)
 
 Once Unity is installed, the projects in the repe can be opened using Unity Hub and run in Unity.
 
