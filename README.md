@@ -13,3 +13,5 @@ The privacy simulations can be found in the project HolodeckPrivacySimulations. 
 Each of these scenes can be run in Unity (by hitting the play button at the top) to observe the scene play out. The main user in the scenes can be controlled using the arrow keys. Moving to the spot marked by the circular plate will start up the holodeck. The user's view can be accessed on Display 2. The unauthorized viewer's view can be found on Display 3.
 
 The folder evaluate_metrics contained Python code to calculate the privacy metrics on views obtained from the different solutions.
+
+For more details refer to our report.
