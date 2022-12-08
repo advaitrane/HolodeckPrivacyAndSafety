@@ -14,4 +14,8 @@ Each of these scenes can be run in Unity (by hitting the play button at the top)
 
 The folder evaluate_metrics contained Python code to calculate the privacy metrics on views obtained from the different solutions.
 
+Here is a demo video of the sample scene:
+https://user-images.githubusercontent.com/47237377/206562112-dad2e350-668e-4eca-8a8a-cb75012ea399.mov
+
 For more details refer to our report.
+
